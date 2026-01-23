@@ -1,18 +1,15 @@
-name: Vite workflow test 2
+name: Mon premier workflow
 on: push
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.os == 'ubuntu-latest' }}
-    strategy:
-      max-parallel: 1
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-        vers: [12, 13]
-        exclude:
-          - os: windows-latest
-            vers: 12
     steps:
-      - run: echo ${{ matrix.os}} ${{matrix.vers}}
+      - uses: actions/checkout@v4
+      - run: |
+          echo 123 > test.txt
+          git config --global user.email "test&dyma.fr"
+          git config --global user.name "FROM CI"
+          git add test.txt
+          git commit -m "first"
+          git push origin main
