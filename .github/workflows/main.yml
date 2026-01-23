@@ -1,4 +1,4 @@
-name: Mon premier workflow
+name: Vite workflow
 on: push
 
 jobs:
