@@ -1,7 +1,12 @@
 name: Mon premier workflow
 on: [push]
 jobs:
-  say-hello:
+  build:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World !"
+  deploy:
+    needs: build
+    runs-on: unbuntu-latest
+    steps:
+      - run: echo deploy in prod
