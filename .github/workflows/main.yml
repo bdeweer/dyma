@@ -11,6 +11,5 @@ jobs:
             endpoint: url1
           - cloud: aws
             endpoint: url2
-        vers: [12, 13, 14]
     steps:
       - run: echo ${{ matrix.cloud}} ${{matrix.endpoint}}
