@@ -18,5 +18,5 @@ jobs:
             ${{ runner.os}}-
 
       - name: install dependencies
-        run: npm ci --cache ./npm --prefer-offline
+        run: npm ci --cache .npm --prefer-offline
         working-directory: ./vite-project
