@@ -5,7 +5,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -run: echo $GITHUB_STEP_SUMMARY
-      -run: echo '# Je suis un titre' >> $GITHUB_STEP_SUMMARY
-      -run: echo 'Je suis du contenu :rocket:' >> $GITHUB_STEP_SUMMARY
-      -run: echo '' >> $GITHUB_STEP_SUMMARY
+      -run: |
+         echo $GITHUB_STEP_SUMMARY
+         echo '# Je suis un titre' >> $GITHUB_STEP_SUMMARY
+         echo 'Je suis du contenu :rocket:' >> $GITHUB_STEP_SUMMARY
+         echo '' >> $GITHUB_STEP_SUMMARY
