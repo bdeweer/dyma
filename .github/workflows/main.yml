@@ -1,4 +1,4 @@
-name: Vite workflow
+name: Vite workflow test
 on: push
 
 jobs:
